@@ -1,0 +1,27 @@
+﻿[
+  {
+    "ProductId": "16f4745d-5473-4dd4-8427-5261d3ae1d45",
+    "Description": "iPhone 6 Plus",
+    "UnitPrice": 600
+  },
+  {
+    "ProductId": "3379b8f7-f81c-45a2-925e-4489c89312dc",
+    "Description": "Xbox One",
+    "UnitPrice": 395
+  },
+  {
+    "ProductId": "f488ee4d-1cff-433f-95ed-69a879ae416f",
+    "Description": "Playstation 4",
+    "UnitPrice": 400
+  },
+  {
+    "ProductId": "6f93d344-78fa-48c6-b7a4-ac711ba2846a",
+    "Description": "Nikon DSLR",
+    "UnitPrice": 600
+  },
+  {
+    "ProductId": "9e623b1d-268b-45f0-932f-118d2a0d83de",
+    "Description": "GoPro HERO4",
+    "UnitPrice": 250
+  }
+]
