@@ -48,6 +48,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="StackExchange.Redis, Version=1.0.316.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StackExchange.Redis.1.0.488\lib\net45\StackExchange.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -87,6 +91,8 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Data\Cache.cs" />
+    <Compile Include="Data\CacheAsideProductService.cs" />
     <Compile Include="Data\ProductService.cs" />
     <Compile Include="Data\SampleData.cs" />
     <Compile Include="Global.asax.cs">
@@ -98,6 +104,8 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="SampleData.json" />
+    <Content Include="SecretSettings.config" />
+    <Content Include="README.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

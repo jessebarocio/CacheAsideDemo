@@ -12,7 +12,8 @@ namespace CacheAsideDemo.Controllers
     [RoutePrefix( "api/products" )]
     public class ProductController : ApiController
     {
-        IProductService _service = new ProductService();
+        //IProductService _service = new ProductService(); // No Caching
+        IProductService _service = new CacheAsideProductService( new ProductService(), new Cache() );
 
         [HttpGet, Route( "{id:guid}" )]
         public Product Get( Guid id )
