@@ -37,5 +37,11 @@ namespace CacheAsideDemo.Data
             }
             return value;
         }
+
+        public void InvalidateCacheEntry( string key )
+        {
+            var redis = Connection.GetDatabase();
+            redis.KeyDelete( key );
+        }
     }
 }

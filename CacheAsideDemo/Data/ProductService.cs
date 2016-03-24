@@ -9,6 +9,7 @@ namespace CacheAsideDemo.Data
     public interface IProductService
     {
         Product Get( Guid id );
+        void Update( Guid id, Product product );
     }
 
     public class ProductService : IProductService
@@ -21,6 +22,13 @@ namespace CacheAsideDemo.Data
                 throw new ProductNotFoundException( String.Format( "Could not find product with id '{0}'", id ) );
             }
             return product;
+        }
+
+        public void Update( Guid id, Product product )
+        {
+            var existingProduct = Get( id );
+            existingProduct.Description = product.Description;
+            existingProduct.UnitPrice = product.UnitPrice;
         }
     }
 

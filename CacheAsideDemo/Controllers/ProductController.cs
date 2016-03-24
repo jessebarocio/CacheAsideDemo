@@ -20,5 +20,12 @@ namespace CacheAsideDemo.Controllers
         {
             return _service.Get( id );
         }
+
+        [HttpPut, Route( "{id:guid}" )]
+        public Product Update( Guid id, Product product )
+        {
+            _service.Update( id, product );
+            return product;
+        }
     }
 }

@@ -23,5 +23,12 @@ namespace CacheAsideDemo.Data
             var cacheKey = String.Format( "Product_{0}", id );
             return _cache.GetFromCache<Product>( cacheKey, () => _underlyingService.Get( id ) );
         }
+
+        public void Update( Guid id, Product product )
+        {
+            var cacheKey = String.Format( "Product_{0}", id );
+            _underlyingService.Update( id, product );
+            _cache.InvalidateCacheEntry( cacheKey );
+        }
     }
 }
